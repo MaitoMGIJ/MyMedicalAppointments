@@ -9,8 +9,11 @@ public class Doctor {
         id++;
     }
 
-    Doctor(String name){
-        System.out.println("El nombre del doctor es " + name);
+    Doctor(String name, String speciality){
+        id++;
+        this.name = name;
+        this.speciality = speciality;
+        System.out.println("El nombre del doctor es " + this.name);
     }
 
     public void showName(){
