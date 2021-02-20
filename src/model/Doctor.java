@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+package model;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,8 +8,16 @@ public class Doctor extends User{
     private String speciality;
     private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
-    Doctor(String name, String email){
+    public Doctor(String name, String email){
         super(name, email);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nmodel.Doctor{" +
+                "speciality='" + speciality + '\'' +
+                "\n Available \n" + availableAppointments.toString() +
+                '}';
     }
 
     public String getSpeciality() {
@@ -59,6 +68,11 @@ public class Doctor extends User{
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "Available Appointments \n Date: " + date + "\n Time: " + time;
         }
     }
 }

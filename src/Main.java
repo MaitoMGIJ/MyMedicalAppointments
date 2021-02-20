@@ -1,4 +1,5 @@
-import ui.UIMenu;
+import model.Doctor;
+import model.Patient;
 
 import java.util.Date;
 
@@ -7,7 +8,7 @@ public class Main {
 
         //UIMenu.showMenu();
 
-        Doctor myDoctor = new Doctor("Mauricio Avila","Neurologo");
+        Doctor myDoctor = new Doctor("Mauricio Avila","mao979797@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
@@ -16,6 +17,9 @@ public class Main {
             System.out.println(aA.getDate()+" "+aA.getTime());
         }
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+
+        System.out.println(patient);
+        System.out.println(myDoctor);
 
     }
 
