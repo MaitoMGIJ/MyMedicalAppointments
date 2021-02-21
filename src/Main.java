@@ -19,7 +19,11 @@ public class Main {
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
 
         System.out.println(patient);
+        patient.showDataUser();
+        System.out.println();
         System.out.println(myDoctor);
+        myDoctor.showDataUser();
+
 
     }
 

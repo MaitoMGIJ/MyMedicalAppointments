@@ -20,6 +20,12 @@ public class Doctor extends User{
                 '}';
     }
 
+    @Override
+    public void showDataUser() {
+        System.out.println("Empleado del Hospital Cruz Roja");
+        System.out.println("Departamento: Oncologia");
+    }
+
     public String getSpeciality() {
         return speciality;
     }
