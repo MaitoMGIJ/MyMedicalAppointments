@@ -3,6 +3,7 @@ package ui;
 import model.Doctor;
 import model.Patient;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class UIMenu {
     public static Doctor doctorLogged;
     public static Patient patientLogged;
 
-    public static void showMenu(){
+    public static void showMenu() throws ParseException {
         System.out.println("Welcome to My Appointments");
         System.out.println("Selecciona la opción deseada");
 
@@ -44,7 +45,7 @@ public class UIMenu {
         }while (response != 0);
     }
 
-    private static void authUser(int userType){
+    private static void authUser(int userType) throws ParseException {
         ArrayList<Doctor> doctors = new ArrayList<>();
         doctors.add(new Doctor("Alejandro Martinez", "alejandro@mail.com"));
         doctors.add(new Doctor("Karen Sosa", "karen@mail.com"));
@@ -66,7 +67,7 @@ public class UIMenu {
                     if(d.getEmail().equals(email)){
                         emailCorrect = true;
                         doctorLogged = d;
-
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }
@@ -76,14 +77,14 @@ public class UIMenu {
                     if(p.getEmail().equals(email)){
                         emailCorrect = true;
                         patientLogged = p;
-
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
         }while(!emailCorrect);
     }
 
-    public static void showPatientMenu(){
+    public static void showPatientMenu() throws ParseException {
         int response = 0;
         do {
             System.out.println("\n\n");

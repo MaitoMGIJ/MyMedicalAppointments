@@ -1,25 +1,15 @@
 import model.Doctor;
 import model.Patient;
+import ui.UIMenu;
 
+import java.text.ParseException;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
-        //UIMenu.showMenu();
+        UIMenu.showMenu();
 
-        Doctor myDoctor = new Doctor("Mauricio Avila","mao979797@gmail.com");
-
-        for (Doctor.AvailableAppointment aA: myDoctor.getAvailableAppointments()) {
-            System.out.println(aA.getDate()+" "+aA.getTime());
-        }
-        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-
-        System.out.println(patient);
-        patient.showDataUser();
-        System.out.println();
-        System.out.println(myDoctor);
-        myDoctor.showDataUser();
 
 
     }

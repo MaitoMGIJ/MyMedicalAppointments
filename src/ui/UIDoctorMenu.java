@@ -10,7 +10,7 @@ public class UIDoctorMenu {
 
     public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<Doctor>();
 
-    public static void showDoctorMenu(){
+    public static void showDoctorMenu() throws ParseException {
         int response = 0;
         do{
             System.out.println();
@@ -26,6 +26,7 @@ public class UIDoctorMenu {
 
             switch (response){
                 case 1:
+                    showAddAvailableAppointmentsMenu();
                     break;
                 case 2:
                     break;
